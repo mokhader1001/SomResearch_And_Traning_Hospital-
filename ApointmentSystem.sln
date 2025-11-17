@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36705.20
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppointmentSystem", "ApointmentSystem\AppointmentSystem.csproj", "{1697FE70-D23B-4558-8DA9-6BB81845FAB1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DoctorFiles", "DoctorFiles", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "images", "images", "{6ADE385D-FE51-4982-AFFA-3C5F0A31BF6D}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\Downloads\evc.jpg = ..\..\..\Downloads\evc.jpg
+		..\..\..\Downloads\premierwallet.png = ..\..\..\Downloads\premierwallet.png
+		..\..\..\Downloads\evc-20plus.webp = ..\..\..\Downloads\evc-20plus.webp
+		..\..\..\Downloads\salamBank.png = ..\..\..\Downloads\salamBank.png
+		..\..\..\Downloads\waafi.png = ..\..\..\Downloads\waafi.png
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1697FE70-D23B-4558-8DA9-6BB81845FAB1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1697FE70-D23B-4558-8DA9-6BB81845FAB1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1697FE70-D23B-4558-8DA9-6BB81845FAB1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1697FE70-D23B-4558-8DA9-6BB81845FAB1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EA76B5BA-BC2C-4121-8C95-3397AA37A486}
+	EndGlobalSection
+EndGlobal
