@@ -1,5 +1,5 @@
 ﻿<%@ Page Title="Dashboard" Language="C#" MasterPageFile="~/Site1.Master"
-    AutoEventWireup="true" CodeBehind="Dashboard.aspx.cs" Inherits="AppointmentSystem.Dashboard" %>
+    AutoEventWireup="true" CodeBehind="Dashboard.aspx.cs" Inherits="AppointmentSystem.Doctors" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style>

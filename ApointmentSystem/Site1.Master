@@ -1,84 +1,140 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="AppointmentSystem.Site1" %>
-
+﻿<%@ Master Language="C#" AutoEventWireup="true"
+    CodeBehind="Site1.master.cs"
+    Inherits="AppointmentSystem.Site1" %>
 
 <!DOCTYPE html>
-
 <html>
 <head runat="server">
     <title>Appointment System</title>
 
-    <!-- BOOTSTRAP -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- External Libraries (2025 Links) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/select2-bootstrap-5-theme@1.3.0/dist/select2-bootstrap-5-theme.min.css" rel="stylesheet" />
 
     <style>
         body {
-            display: flex;
             margin: 0;
             background: #f0f2f5;
+            font-family: 'Segoe UI', Arial, sans-serif;
         }
 
-        /* Sidebar */
+        /* ===== SIDEBAR (Larger Width) ===== */
         .sidebar {
-            width: 240px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 280px; /* Increased from 240px */
+            height: 100vh;
             background: #1e1e2f;
             color: white;
-            min-height: 100vh;
-            padding: 20px 10px;
+            padding: 30px 15px; /* Increased padding */
+            z-index: 999;
         }
 
         .sidebar h2 {
             text-align: center;
-            margin-bottom: 30px;
+            margin-bottom: 40px;
+            font-size: 26px; /* Larger Title */
+            font-weight: bold;
+            letter-spacing: 1px;
+            color: #fff;
         }
 
+        /* Menu Items with more space */
         .sidebar a {
-            display: block;
-            padding: 12px 15px;
-            margin-bottom: 10px;
-            border-radius: 6px;
-            color: #ddd;
+            display: flex;
+            align-items: center;
+            padding: 15px 20px; /* More padding inside the button */
+            margin-bottom: 15px; /* More space between items */
+            border-radius: 8px;
+            color: #b8b8c0;
             text-decoration: none;
-            font-size: 16px;
+            font-size: 18px; /* Slightly larger text */
+            transition: all 0.3s ease;
+        }
+
+        /* Icon spacing and size */
+        .sidebar a i {
+            width: 35px; /* More room for the icon */
+            margin-right: 15px; /* More space between icon and text */
+            font-size: 20px; /* Larger icons */
+            text-align: center;
         }
 
         .sidebar a:hover {
             background: #34344a;
-            color: white;
+            color: #ffffff;
+            transform: translateX(5px); /* Subtle slide effect */
         }
 
-        /* Content */
+        /* Logout specific styling */
+        .logout-link {
+            margin-top: 40px !important;
+            color: #ff7675 !important;
+            border: 1px solid rgba(255, 118, 117, 0.2);
+        }
+
+        .logout-link:hover {
+            background: rgba(255, 118, 117, 0.1) !important;
+        }
+
+        /* ===== MAIN CONTENT (Adjusted for wider sidebar) ===== */
         .content {
-            flex: 1;
-            padding: 25px;
+            margin-left: 280px; /* Match sidebar width */
+            padding: 40px;
+            height: 100vh;
+            overflow-y: auto;
         }
     </style>
 
     <asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder>
-
 </head>
+
 <body>
 
-    <!-- SIDEBAR -->
+    <!-- ===== SIDEBAR ===== -->
     <div class="sidebar">
-        <h2>Appointments</h2>
+        <h2>Hospital Pro</h2>
 
-        <a href="Dashboard.aspx">Dashboard</a>
-        <a href="Doctors.aspx">Doctors</a>
-        <a href="Patients.aspx">Patients</a>
-        <a href="Appointments.aspx">Make Appointment</a>
-       
-        <a href="Logout.aspx">Logout</a>
+        <a href="Dashboard.aspx">
+            <i class="fa-solid fa-house"></i>
+            <span>Dashboard</span>
+        </a>
+
+        <a href="Doctors.aspx">
+            <i class="fa-solid fa-user-doctor"></i>
+            <span>Doctors</span>
+        </a>
+
+        <a href="Patients.aspx">
+            <i class="fa-solid fa-users"></i>
+            <span>Patients</span>
+        </a>
+
+        <a href="Appointments.aspx">
+            <i class="fa-solid fa-calendar-check"></i>
+            <span>Appointments</span>
+        </a>
+
+        <a href="Logout.aspx" class="logout-link">
+            <i class="fa-solid fa-right-from-bracket"></i>
+            <span>Logout</span>
+        </a>
     </div>
 
-    <!-- MAIN CONTENT -->
+    <!-- ===== MAIN CONTENT ===== -->
     <div class="content">
-        <form runat="server">
-            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+        <form id="form1" runat="server">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server" />
         </form>
     </div>
 
-    <!-- BOOTSTRAP JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Scripts -->
+    <script src="code.jquery.com"></script>
+    <script src="cdn.jsdelivr.net"></script>
+    <script src="cdn.jsdelivr.net"></script>
 
     <asp:ContentPlaceHolder ID="scripts" runat="server"></asp:ContentPlaceHolder>
 

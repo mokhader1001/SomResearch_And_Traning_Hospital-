@@ -11,7 +11,7 @@ namespace AppointmentSystem
 {
 
 
-    public partial class Dashboard
+    public partial class Doctors
     {
     }
 }

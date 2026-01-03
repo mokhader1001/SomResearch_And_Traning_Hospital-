@@ -70,6 +70,8 @@
     <Content Include="Apoint.aspx" />
     <Content Include="Appoint.asmx" />
     <Content Include="Appointments.aspx" />
+    <Content Include="ChatBot.aspx" />
+    <Content Include="ChatBotService.asmx" />
     <Content Include="Dashboard.aspx" />
     <Content Include="Doctors.aspx" />
     <Content Include="Global.asax" />
@@ -97,6 +99,17 @@
     </Compile>
     <Compile Include="Appointments.aspx.designer.cs">
       <DependentUpon>Appointments.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ChatBot.aspx.cs">
+      <DependentUpon>ChatBot.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ChatBot.aspx.designer.cs">
+      <DependentUpon>ChatBot.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ChatBotService.asmx.cs">
+      <DependentUpon>ChatBotService.asmx</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Dashboard.aspx.cs">
       <DependentUpon>Dashboard.aspx</DependentUpon>
