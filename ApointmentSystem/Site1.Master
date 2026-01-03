@@ -118,6 +118,11 @@
             <span>Appointments</span>
         </a>
 
+        <a href="ChatBot.aspx">
+            <i class="fa-solid fa-comment-medical"></i>
+            <span>Health chatboot</span>
+        </a>
+
         <a href="Logout.aspx" class="logout-link">
             <i class="fa-solid fa-right-from-bracket"></i>
             <span>Logout</span>
